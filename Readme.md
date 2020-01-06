@@ -54,7 +54,7 @@ This command will provide a URL. Run the URL in a browser (Firefox). If a web pa
 * Introduction to PyBullet (notebook: sim_env_setup.ipynb)
     * How to start a PyBullet session  
     * Settings the simulation parameters in PyBullet  
-    *Loading URDF files in PyBullet  
+    * Loading URDF files in PyBullet  
 
 
 * Torque control of robot state in PyBullet (notebook: torque_control.ipynb)
