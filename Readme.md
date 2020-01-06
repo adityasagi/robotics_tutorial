@@ -89,3 +89,8 @@ This command will provide a URL. Run the URL in a browser (Firefox). If a web pa
 
 * [Kinematics of serial-2R manipulators.](https://ed.iitm.ac.in/~sandipan/files/serialkinematicsv2.pdf)
 
+
+## Additional References
+* [OpenAI Gym](https://gym.openai.com/)
+
+* [Building a balance bot with OpenAI gym and PyBullet](https://backyardrobotics.eu/2017/11/27/build-a-balancing-bot-with-openai-gym-pt-i-setting-up/)
