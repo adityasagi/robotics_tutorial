@@ -45,31 +45,31 @@ This command will provide a URL. Run the URL in a browser (Firefox). If a web pa
 
 ## Agenda 
 
-* Kinematics of a serial-2R manipulator  
+* Kinematics of a serial-2R manipulator (notebook: kinematics.ipynb)
     * Forward kinematics  
     * Inverse kinematics  
     * Verification of the FK and IK modules against each other  
 
 
-* Introduction to PyBullet  
+* Introduction to PyBullet (notebook: sim_env_setup.ipynb)
     * How to start a PyBullet session  
     * Settings the simulation parameters in PyBullet  
     *Loading URDF files in PyBullet  
 
 
-* Torque control of robot state in PyBullet  
+* Torque control of robot state in PyBullet (notebook: torque_control.ipynb)
     * Obtaining joint information  
     * Setting the control mode (and enabling the motors)  
     * Control of joint torque  
 
 
-* PID control of robot  
+* PID control of robot (notebook: torque_control.ipynb)
     * Reading the joint state  
     * Determining the control action  
     * Setting the required control torque  
 
 
-* Point-to-point tracking of end-effector  
+* Point-to-point tracking of end-effector (notebook: torque_control.ipynb)
     * Obtaining the required joint angles to reach the desired end-effector position  
     * Simulating a PID position control loop to reach the desired end-effector position  
 
