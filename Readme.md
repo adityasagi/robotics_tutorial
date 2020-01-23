@@ -22,17 +22,24 @@ Install PyBullet (while in the environment):
 $ pip install pybullet  
 ```
 
+Install Matplotlib (while in the environment):
+```
+$ conda install matplotlib
+```
+
+
 
 To check the installation launch:  
 ```
 $ python  
 ```
 
-Inside the python environment import the pybullet library:  
+Inside the python environment import the pybullet and matplotlib libraries:  
 ```
 >> import pybullet
+>> import matplotlib
 ```
-If this command executes without any error then the pybullet installation is successful.  
+If this command executes without any error then the installation is successful.  
 
 
 Check the Jupyter notebook by running the following command in the bash shell:  
