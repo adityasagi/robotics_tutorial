@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<robot name="planar_2R_robot">
+
+<!-- simple two-axis scara robot -->
+
+
+<material name="blue">
+  <color rgba="0 0 0.4 1"/>
+</material>
+
+<material name="light_blue">
+  <color rgba="0.0 0.0 0.9 1"/>
+</material>
+
+<material name="red">
+  <color rgba="0.8 0 0 1"/>
+</material>
+
+
+
+<!-- world link -->
+<link name="world"/>
+
+<!-- base_link and its fixed joint -->
+<joint name="joint_fix" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+
+<link name="base_link">
+  <collision>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.4" radius="0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.4" radius="0.1"/>
+    </geometry>
+    <material name="red" />
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <mass value="1"/>
+    <inertia
+      ixx="1.0" ixy="0.0" ixz="0.0"
+      iyy="1.0" iyz="0.0"
+      izz="1.0"/>
+  </inertial>
+</link>
+
+
+<!-- the first arm of the scara, with revolute joint rotating along z axis -->
+<!-- arm length between two rotation axis is 1 -->
+<joint name="rotation1" type="revolute">
+  <parent link="base_link"/>
+  <child link="arm1"/>
+  <origin xyz="0 0 0.4" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="100" velocity="10" lower="-3.14" upper="3.14"/>
+</joint>
+
+<link name="arm1">
+  <collision>
+    <origin xyz="0 -0.5 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 1.1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 -0.5 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 1.1 0.1"/>
+    </geometry>
+    <material name="blue" />
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <mass value="1"/>
+    <inertia
+      ixx="0.001" ixy="0.0" ixz="0.0"
+      iyy="0.001" iyz="0.0"
+      izz="0.001"/>
+  </inertial>
+</link>
+
+
+<!-- the second arm and its rotation joint -->
+<!-- arm length between two rotation axis is 0.8 -->
+<joint name="rotation2" type="revolute">
+  <parent link="arm1"/>
+  <child link="arm2"/>
+  <origin xyz="0 -1 0.1" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="1000" velocity="1000" lower="-3.00" upper="3.00"/>
+</joint>
+
+<link name="arm2">
+  <collision>
+    <origin xyz="0 -0.4 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 0.9 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 -0.4 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 0.9 0.1"/>
+    </geometry>
+    <material name="light_blue" />
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <mass value="1"/>
+    <inertia
+      ixx="0.001" ixy="0.0" ixz="0.0"
+      iyy="0.001" iyz="0.0"
+      izz="0.001"/>
+  </inertial>
+</link>
+
+</robot>
+
+
