@@ -81,14 +81,6 @@ This command will provide a URL. Run the URL in a browser (Firefox). If a web pa
     * Simulating a PID position control loop to reach the desired end-effector position  
 
 
-* Simulating an industrial robot (KUKA KR210)  
-    * Obtaining the URDF models for the robots  
-    * Loading the URDF model  
-    * Obtaining the joint information  
-    * Controlling the robot joints  
-
-
-
 ## References
 * [PyBullet Quick start guide.](https://usermanual.wiki/Document/pybullet20quickstart20guide.479068914/html)
 
