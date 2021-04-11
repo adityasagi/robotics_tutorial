@@ -100,4 +100,4 @@ This command will provide a URL. Run the URL in a browser (Firefox). If a web pa
 ## Additional References
 * [OpenAI Gym](https://gym.openai.com/)
 
-* [Building a balance bot with OpenAI gym and PyBullet](https://backyardrobotics.eu/2017/11/27/build-a-balancing-bot-with-openai-gym-pt-i-setting-up/)
+* [Building a balance bot with OpenAI gym and PyBullet](https://backyardrobotics.wordpress.com/2017/11/27/build-a-balancing-bot-with-openai-gym-pt-i-setting-up/)
